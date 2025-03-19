@@ -98,6 +98,8 @@ form.addEventListener("submit", (e) => {
       .then((result) => {
         fetchAllExpenses();
         form.reset();
+        document.getElementById("add").textContent = "Add";
+        editingExpenseId = null;
         console.log("expense added successfully");
       })
       .catch((err) => {
